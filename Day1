@@ -1,3 +1,25 @@
 # profiles
 ## Leetcode
-[leetcode]https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/editorial
+## Checking if an Array is sorted and rotated
+class Solution {
+    public boolean check(int[] nums) {
+        int i,len,count;
+        boolean tracker=false;
+        count=0;
+        len=nums.length-1;
+            for(i=0;i<len;i++){
+                if(nums[i]>nums[i+1])
+                    count++;
+            }
+        if(count==1){
+            if(nums[0]>=nums[len]){
+                tracker=true;
+            }
+        }
+            else if(count==0){
+                tracker=true;
+            }
+            return tracker;
+        }
+    }
+    
